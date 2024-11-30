@@ -1,74 +1,88 @@
-/* Global Styles */
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
 }
 
-h1, h2, h3 {
+/* Body and Main Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
   color: #333;
 }
 
-/* Header Styles */
-.header {
+header {
   background-color: #0044cc;
-  color: #fff;
   padding: 20px;
   text-align: center;
+  color: #fff;
 }
 
-.header h1 {
+header img {
+  margin-bottom: 10px;
+}
+
+header h1 {
   font-size: 2.5rem;
 }
 
-.header nav ul {
-  list-style: none;
+header nav ul {
+  list-style-type: none;
   padding: 0;
 }
 
-.header nav ul li {
-  display: inline-block;
+header nav ul li {
+  display: inline;
   margin: 0 15px;
 }
 
-.header nav ul li a {
+header nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+main {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 /* Property Showcase Section */
-.showcase {
-  padding: 20px;
+#showcase {
+  padding: 40px 0;
+}
+
+#showcase h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .properties {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
-  grid-gap: 20px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .property-card {
-  background-color: #fff;
-  padding: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 300px;
-}
-
-.property-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .property-card h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  color: #0044cc;
 }
 
 .property-card p {
@@ -76,78 +90,116 @@ h1, h2, h3 {
   margin-bottom: 10px;
 }
 
-.property-card iframe {
+.property-card img {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  margin-top: 10px;
+  margin: 15px 0;
+}
+
+.property-card iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .property-card a {
-  display: inline-block;
-  margin-top: 10px;
   color: #0044cc;
   text-decoration: none;
-  font-weight: bold;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-  .properties {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  }
+.property-card a:hover {
+  text-decoration: underline;
 }
 
-@media (max-width: 900px) {
-  .properties {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  }
-}
-
-@media (max-width: 600px) {
-  .properties {
-    grid-template-columns: 1fr; /* 1 card per row */
-  }
-}
-
-/* About and Contact Section */
-.about, .contact {
-  padding: 40px;
+/* About Section */
+#about {
+  padding: 40px 0;
   text-align: center;
 }
 
-.about p, .contact form {
-  font-size: 1rem;
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.contact form input, .contact form textarea {
-  width: 80%;
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+#about a {
+  color: #0044cc;
+  text-decoration: none;
+}
+
+#about a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+#contact {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact label {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+#contact input, #contact textarea {
+  width: 100%;
   padding: 10px;
-  margin: 10px 0;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
-.contact form button {
-  padding: 10px 20px;
+#contact button {
   background-color: #0044cc;
   color: white;
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-size: 1.1rem;
   cursor: pointer;
 }
 
-.contact form button:hover {
+#contact button:hover {
   background-color: #0033aa;
 }
 
-/* Footer */
-.footer {
+/* Footer Section */
+footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
+  padding: 10px;
+  margin-top: 40px;
 }
 
-footer p {
-  margin: 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+  header nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .properties {
+    grid-template-columns: 1fr;
+  }
 }
