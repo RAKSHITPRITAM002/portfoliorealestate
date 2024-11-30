@@ -1,0 +1,153 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Header Styles */
+.header {
+  background-color: #0044cc;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Property Showcase Section */
+.showcase {
+  padding: 20px;
+}
+
+.properties {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.property-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.property-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.property-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.property-card iframe {
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.property-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0044cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .properties {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .properties {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .properties {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+
+/* About and Contact Section */
+.about, .contact {
+  padding: 40px;
+  text-align: center;
+}
+
+.about p, .contact form {
+  font-size: 1rem;
+}
+
+.contact form input, .contact form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact form button {
+  padding: 10px 20px;
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background-color: #0033aa;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
